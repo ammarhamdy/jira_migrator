@@ -41,7 +41,7 @@ def migrate(csv_file: str) -> None:
         sys.exit(1)
 
     # ── 2. Read CSV ─────────────────────────────────────────────
-    rows = read_csv(csv_file)[1:]
+    rows = read_csv(csv_file)
     if not rows:
         log.warning("No issues found in CSV. Exiting.")
         return
